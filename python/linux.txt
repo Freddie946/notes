@@ -1,0 +1,53 @@
+init 0 #关机
+exit #退出
+whoami #查看当面终端
+who #查看有多少个终端
+date #查看日期
+cal #查看日历
+man #查看命令
+命令 --help #查看命令
+useradd #增加用户
+passwd #修改用户
+cp # i 覆盖文件之前先询问用户 
+   # r 复制目录
+   # p 复制时，保留文件或者目录的属性，包括所有者等
+   # f 强制复制，不论文件或者目录是否已经存在
+rm # v 打印操作
+   # f 递归删除
+   # r 忽略不存在的文件，不给出提示
+   # i 进行交互式的删除
+head #显示头10行 head -n 100 xxx.text
+more # 显示更多，回车下翻
+top #动态检测操作系统的命令
+free #查看内存
+---------------------------------------------
+软件包管理
+源码包，编译安装
+rpm（redhad package manage）这种方式更简单
+rpm -qa 显示已经安装的软件包
+rpm -ivh xxx.rpm安装软件包 i 安装 v 显示安装过程 h 显示安装进度
+rpm -Uvh 更新软件包
+rpm -e 删除软件包
+rpm -e -nodeps 不考虑依赖包
+rpm -e -allmatches 删除所有匹配的版本包
+
+yum yellow dog updater modified，python写的，yum需要指定一个安装源
+自定义yum源
+yum search #搜索yum源
+yum install # 安装yum软件源 
+yum erase 卸载
+
+----------------------------------------------
+安装Apache
+yum install httpd
+配置文件
+/etc/httpd/conf/httpd.conf
+
+------------------------------------------------
+安装samba
+网络服务器
+yum install samba
+/etc/samba/smb.conf
+service smb status
+如果为用户，需要配置linux用户
+smbpasswd
